@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Poor+Story&display=swap");
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -18,6 +19,7 @@
 
 body {
   color: rgb(var(--foreground-rgb));
+  font-family: "Poor Story", system-ui !important;
   background: linear-gradient(
       to bottom,
       transparent,
@@ -29,5 +31,59 @@ body {
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+/* TYPE WRITER ANIMATION */
+.typewriter {
+  overflow: hidden;
+  border-right: 0.15em solid orange;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.15em;
+  animation:
+    typing 3.5s steps(23),
+    blink-caret 0.7s step-end infinite;
+}
+@keyframes typing {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 14%;
+  }
+}
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
+
+/* BLOB ANIMATION */
+.box {
+  background: url("https://avatars.githubusercontent.com/u/109368904?v=4");
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+  height: 250px;
+  width: 250px;
+
+  animation: animate 5s ease-in-out infinite;
+  transition: all 1s ease-in-out;
+}
+
+@keyframes animate {
+  0% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+  }
+  100% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
   }
 }
