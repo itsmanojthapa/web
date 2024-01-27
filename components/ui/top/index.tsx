@@ -3,18 +3,18 @@ import React from "react";
 import { SiTypescript } from "react-icons/si";
 import { FaHtml5 } from "react-icons/fa";
 import { FaCss3 } from "react-icons/fa";
-import { FaReact } from "react-icons/fa";
 import { FaCode } from "react-icons/fa6";
 import Link from "next/link";
 import pageState from "@/components/state/pageState";
 import { useRecoilState } from "recoil";
+import { FaFolderTree } from "react-icons/fa6";
 
 const Top = () => {
   const [pageValue, setPageState] = useRecoilState(pageState);
 
   return (
     <div>
-      <div className="flex h-8 flex-row  bg-[#1a1d20]">
+      <div className="flex h-8 flex-row  bg-[#1a1d20] max-[599px]:hidden">
         <Link
           href="/"
           className={`flex w-fit flex-row items-center ${pageValue === 1 && "bg-[#252A2E]"}   p-3 text-sm`}
@@ -36,7 +36,7 @@ const Top = () => {
           className={`flex flex-row items-center p-3 text-sm ${pageValue === 3 && "bg-[#252A2E]"}`}
           onClick={() => setPageState(3)}
         >
-          <FaReact className="mr-1 text-teal-500 " />
+          <FaFolderTree className="mr-1 text-green-500 " />
           projects.tsx
         </Link>
         <Link

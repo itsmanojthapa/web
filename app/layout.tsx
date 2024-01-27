@@ -32,6 +32,7 @@ export default function RootLayout({
             <div className="flex w-full flex-grow flex-row ">
               <ASide />
               <Explore />
+
               <div className="flex h-full w-full flex-col">
                 <Top />
                 <div className="flex h-full w-full flex-1">{children}</div>

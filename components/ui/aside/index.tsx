@@ -13,7 +13,7 @@ import { useRecoilState } from "recoil";
 const ASide = () => {
   const [pageValue, setPageState] = useRecoilState(pageState);
   return (
-    <div className="flex w-[60px] flex-col justify-between  bg-[#252A2E] ">
+    <div className="flex w-[60px] flex-col justify-between  bg-[#252A2E] max-[360px]:hidden">
       <div className="m-0  mt-2 flex flex-col  items-center justify-center space-y-6">
         <Link
           href="/"

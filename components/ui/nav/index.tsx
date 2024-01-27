@@ -15,7 +15,7 @@ const Nav = () => {
         <div>Terminal</div>
         <div>Help</div>
       </div>
-      <p className="flex w-full items-center justify-center">
+      <p className="flex w-full items-center justify-center max-[950px]:hidden">
         Manoj Thapa - Visual Studio Code
       </p>
       <div className="!mr-3 flex w-full flex-row items-center justify-end space-x-1">
