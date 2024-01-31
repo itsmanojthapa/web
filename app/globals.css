@@ -34,35 +34,6 @@ body {
   }
 }
 
-/* TYPE WRITER ANIMATION */
-.typewriter {
-  overflow: hidden;
-  border-right: 0.15em solid orange;
-  white-space: nowrap;
-  margin: 0 auto;
-  letter-spacing: 0.15em;
-  animation:
-    typing 3.5s steps(23),
-    blink-caret 0.7s step-end infinite;
-}
-@keyframes typing {
-  from {
-    width: 0%;
-  }
-  to {
-    width: 14%;
-  }
-}
-@keyframes blink-caret {
-  from,
-  to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: orange;
-  }
-}
-
 /* BLOB ANIMATION */
 .box {
   background: url("https://avatars.githubusercontent.com/u/109368904?v=4");
